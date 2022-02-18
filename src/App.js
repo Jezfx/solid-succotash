@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import { ThemeProvider } from "@mui/material/styles";
+import { ModalProvider } from "hooks/useModal";
+import { BasketProvider } from "hooks/useBasket";
 
-function App() {
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Shop from "./pages/Shop";
+import Gifting from "./pages/Gifting";
+import Typography from "./pages/Typography";
+
+import defaultTheme from "./styles/themes/default";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={defaultTheme}>
+      <ModalProvider>
+        <BasketProvider>
+          <Router>
+            <Routes>
+              <Route path="/shop" element={<Shop />} />
+              <Route path="/gifting" element={<Gifting />} />
+              <Route path="/typeography" element={<Typography />} />
+            </Routes>
+          </Router>
+        </BasketProvider>
+      </ModalProvider>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
