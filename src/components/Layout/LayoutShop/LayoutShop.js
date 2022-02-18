@@ -39,7 +39,7 @@ const LayoutShop = ({ products = [] }) => {
     <>
       <Hero />
       <Container>
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1, marginTop: 3 }}>
           <Grid container spacing={2}>
             <Grid item xs={12} md={4}>
               <Filters />

@@ -6,6 +6,7 @@ import { BasketProvider } from "hooks/useBasket";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Shop from "./pages/Shop";
+import KitchenSink from "./pages/KitchenSink";
 import Gifting from "./pages/Gifting";
 import Typography from "./pages/Typography";
 
@@ -21,6 +22,7 @@ const App = () => {
               <Route path="/" element={<Shop />} />
               <Route path="/gifting" element={<Gifting />} />
               <Route path="/typeography" element={<Typography />} />
+              <Route path="/kitchen-sink" element={<KitchenSink />} />
             </Routes>
           </Router>
         </BasketProvider>

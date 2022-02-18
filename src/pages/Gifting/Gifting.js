@@ -1,12 +1,28 @@
 import React, { useEffect } from "react";
+import merge from "lodash/merge";
+import Box from "@mui/material/Box";
 import { ThemeProvider } from "@mui/material/styles";
 
-import { useProducts } from "hooks/useProducts";
-
-import LayoutGifting from "components/Layout/LayoutGifting";
+import LayoutShop from "components/Layout/LayoutShop";
 import LayoutPage from "components/Layout/LayoutPage";
 
-import giftingTheme from "styles/themes/gifting";
+import { useProducts } from "hooks/useProducts";
+import { createTheme } from "@mui/material/styles";
+import { defaultTheme } from "styles/themes/default";
+
+const overrides = {
+  components: {
+    MuiAccordion: {
+      styleOverrides: {
+        root: {
+          background: "#f8e8c4",
+        },
+      },
+    },
+  },
+};
+
+const giftingTheme = createTheme(merge(defaultTheme, overrides));
 
 export default function Gifting() {
   const { fetchProducts, products } = useProducts();
@@ -19,7 +35,9 @@ export default function Gifting() {
   return (
     <LayoutPage>
       <ThemeProvider theme={giftingTheme}>
-        <LayoutGifting products={products} />
+        <Box sx={{ background: "#f8e8c4" }}>
+          <LayoutShop products={products} />
+        </Box>
       </ThemeProvider>
     </LayoutPage>
   );

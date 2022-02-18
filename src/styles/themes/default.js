@@ -16,7 +16,7 @@ const colors = {
   },
 };
 
-const theme = createTheme({
+export const defaultTheme = {
   typography: {
     fontFamily: '"filson-pro",Arial,sans-serif',
     h1: {
@@ -68,15 +68,15 @@ const theme = createTheme({
     borderRadius: 0,
   },
   components: {
+    MuiLink: {
+      defaultProps: {
+        color: "inherit",
+      },
+    },
     MuiAppBar: {
       defaultProps: {
         color: "white",
         elevation: 0,
-      },
-      styleOverrides: {
-        positionFixed: {
-          boxShadow: "none",
-        },
       },
     },
     MuiAccordion: {
@@ -88,8 +88,16 @@ const theme = createTheme({
         },
       },
     },
+    MuiAccordionSummary: {
+      styleOverrides: {
+        root: {
+          marginBottom: "2px", // for the :focus boxshadow
+        },
+      },
+    },
     MuiButtonGroup: {
       defaultProps: {
+        disableRipple: true,
         disableElevation: true,
       },
     },
@@ -107,6 +115,9 @@ const theme = createTheme({
           "&:hover": {
             background: "transparent",
           },
+          "&.Mui-focusVisible": {
+            boxShadow: "rgb(94 158 214) 0px 0px 0px 2px",
+          },
         },
       },
     },
@@ -115,6 +126,15 @@ const theme = createTheme({
         disableElevation: true,
       },
       styleOverrides: {
+        root: {
+          color: "#000",
+          "&:hover": {
+            background: "transparent",
+          },
+          "&.Mui-focusVisible": {
+            boxShadow: "rgb(94 158 214) 0px 0px 0px 2px",
+          },
+        },
         small: {
           fontSize: 14,
         },
@@ -130,9 +150,16 @@ const theme = createTheme({
             backgroundColor: "#000",
             color: "#fff",
           },
+          "&.Mui-disabled": {
+            border: "none",
+          },
         },
         outlined: {
           padding: "6px 14px",
+          border: "2px solid #000",
+          transition: "none",
+
+          backgroundColor: "#fff",
           "&:hover": {
             backgroundColor: "#000",
             color: "#fff",
@@ -146,6 +173,6 @@ const theme = createTheme({
       },
     },
   },
-});
+};
 
-export default theme;
+export default createTheme(defaultTheme);

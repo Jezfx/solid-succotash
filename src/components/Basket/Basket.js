@@ -19,7 +19,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
-import ButtonQuantity from "./ButtonQuantity";
+import ButtonQuantity from "../ButtonQuantity";
 
 export default function Basket({ onCloseClick }) {
   return (

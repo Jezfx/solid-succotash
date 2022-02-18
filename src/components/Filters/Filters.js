@@ -32,24 +32,27 @@ export default function Filters() {
           }}
         >
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography variant="h6">Filters</Typography>
+            <Typography variant="h6" mr={1}>
+              Filters
+            </Typography>
+            <Typography sx={{ color: "text.secondary" }}>(1)</Typography>
           </AccordionSummary>
           <AccordionDetails>
+            <Typography variant="body2">
+              Hit Tab, then you can use the arrow keys to navigate
+            </Typography>
             <MenuList dense>
-              <MenuItem>
-                <ListItemText inset>Single</ListItemText>
-              </MenuItem>
-              <MenuItem>
-                <ListItemText inset>1.15</ListItemText>
-              </MenuItem>
-              <MenuItem>
-                <ListItemText inset>Double</ListItemText>
-              </MenuItem>
               <MenuItem>
                 <ListItemIcon>
                   <Check />
                 </ListItemIcon>
-                Custom: 1.2
+                <ListItemText>Noodles</ListItemText>
+              </MenuItem>
+              <MenuItem>
+                <ListItemText inset>Pizza</ListItemText>
+              </MenuItem>
+              <MenuItem>
+                <ListItemText inset>Pastas</ListItemText>
               </MenuItem>
               <Divider />
               <MenuItem>

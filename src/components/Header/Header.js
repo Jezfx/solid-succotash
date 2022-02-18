@@ -2,10 +2,8 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-
+import Link from "@mui/material/Link";
 import Badge from "@mui/material/Badge";
-
 import AccountCircle from "@mui/icons-material/AccountCircle";
 
 import HeaderMenu from "./HeaderMenu";
@@ -47,15 +45,28 @@ export default function Header({ onMenuClick }) {
     <Box sx={{ flexGrow: 1 }}>
       <StyledAppBar position="fixed">
         <Toolbar>
-          <Typography
+          <Link
+            underline="none"
+            href="/"
             variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "none", sm: "block" } }}
+            sx={{
+              display: {
+                xs: "none",
+                sm: "block",
+              },
+              textTransform: "none",
+            }}
           >
             allplants
-          </Typography>
+          </Link>
+
           <Box sx={{ flexGrow: 1 }} />
+          <Link variant="h6" href="/gifting" underline="none" mr={4}>
+            Gifting
+          </Link>
+          <Link variant="h6" href="/kitchen-sink" underline="none" mr={2}>
+            Kitchen sink 🚰
+          </Link>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton
               size="large"
@@ -69,6 +80,7 @@ export default function Header({ onMenuClick }) {
               <AccountCircle />
             </IconButton>
           </Box>
+
           <Box>
             <IconButton
               size="large"

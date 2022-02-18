@@ -51,9 +51,9 @@ export default function LayoutPage({ children }) {
   };
 
   return (
-    <div>
+    <Box sx={{ paddingTop: "60px" }}>
       <Drawer anchor="right" open={isMenuOpen} onClose={toggleDrawer(false)}>
-        <Box sx={{ width: "600px" }}>
+        <Box sx={{ maxWidth: "600px" }}>
           <Basket onCloseClick={handleOnCloseClick} />
         </Box>
       </Drawer>
@@ -61,6 +61,6 @@ export default function LayoutPage({ children }) {
         <Header onMenuClick={handleOnMenuClick} />
         {children}
       </LayoutPageProvider>
-    </div>
+    </Box>
   );
 }

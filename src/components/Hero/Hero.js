@@ -7,8 +7,6 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Button from "@mui/material/Button";
 
-import DoneIcon from "@mui/icons-material/Done";
-
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 
@@ -25,10 +23,14 @@ export default function Hero() {
     <Box sx={{ flexGrow: 1 }}>
       <Grid container>
         <Grid item xs={12} md={6}>
-          <img
+          <Box
             alt=""
-            src="product_bundle.jpeg"
-            style={{ width: "100%", maxWidth: "100%" }}
+            sx={{
+              height: "100%",
+              backgroundSize: "cover",
+              backgroundImage: "url(product_bundle.jpeg)",
+              backgroundPosition: "center",
+            }}
           />
         </Grid>
         <Grid
@@ -68,7 +70,7 @@ export default function Hero() {
               </ListItem>
             )}
           </List>
-          <Button variant="contained">Contained</Button>
+          <Button variant="contained">Build Basket</Button>
         </Grid>
       </Grid>
     </Box>
