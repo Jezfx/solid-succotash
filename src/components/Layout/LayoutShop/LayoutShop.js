@@ -24,7 +24,7 @@ const LayoutShop = ({ products = [] }) => {
   };
 
   const renderProductsList = ({ title, id }) => (
-    <Grid item xs={2} sm={4} md={4} key={id}>
+    <Grid item xs={12} sm={6} md={4} key={id}>
       <ProductCard
         title={title}
         basketTotal={basketTotal}

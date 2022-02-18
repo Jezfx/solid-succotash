@@ -3,7 +3,6 @@ import { StyledButtonGroup, StyledButton } from "./ButtonQuantity.styles";
 
 const ButtonQuantity = ({ onIncreaseQuantityClick, quantity = 0 }) => (
   <StyledButtonGroup
-    disableElevation
     variant="contained"
     aria-label="outlined primary button group"
   >

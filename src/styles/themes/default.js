@@ -79,23 +79,18 @@ const theme = createTheme({
         },
       },
     },
-    // MuiAccordion: {
-    //   styleOverrides: {
-    //     root: {
-    //       "&.Mui-expanded:before": {
-    //         opacity: 1,
-    //       },
-    //     },
-    //   },
-    // },
-    MuiAccordionSummary: {
+    MuiAccordion: {
       styleOverrides: {
-        "&.Mui-expanded": {
-          minHeight: 0,
+        root: {
+          "&.Mui-expanded:before": {
+            opacity: 1,
+          },
         },
-        "& .MuiAccordionSummary-content.Mui-expanded": {
-          margin: "12px 0",
-        },
+      },
+    },
+    MuiButtonGroup: {
+      defaultProps: {
+        disableElevation: true,
       },
     },
     MuiPaper: {
