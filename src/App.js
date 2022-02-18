@@ -18,7 +18,7 @@ const App = () => {
         <BasketProvider>
           <Router>
             <Routes>
-              <Route path="/shop" element={<Shop />} />
+              <Route path="/" element={<Shop />} />
               <Route path="/gifting" element={<Gifting />} />
               <Route path="/typeography" element={<Typography />} />
             </Routes>
