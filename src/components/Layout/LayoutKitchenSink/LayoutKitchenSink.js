@@ -5,6 +5,9 @@ import Divider from "@mui/material/Divider";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
+import DayRangerPicker from "../../DayRangerPicker";
+import DayPicker from "../../DayPicker";
+
 export default function LayoutKitchenSink() {
   return (
     <>
@@ -71,6 +74,13 @@ export default function LayoutKitchenSink() {
             overline text
           </Typography>
         </Stack>
+      </Box>
+
+      <Box mt={4}>
+        <DayRangerPicker />
+      </Box>
+      <Box mt={4}>
+        <DayPicker />
       </Box>
     </>
   );

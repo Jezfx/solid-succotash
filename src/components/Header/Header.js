@@ -61,6 +61,9 @@ export default function Header({ onMenuClick }) {
           </Link>
 
           <Box sx={{ flexGrow: 1 }} />
+          <Link variant="h6" href="/" underline="none" mr={4}>
+            Shop
+          </Link>
           <Link variant="h6" href="/gifting" underline="none" mr={4}>
             Gifting
           </Link>

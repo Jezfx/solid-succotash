@@ -53,7 +53,7 @@ export default function LayoutPage({ children }) {
   return (
     <Box sx={{ paddingTop: "60px" }}>
       <Drawer anchor="right" open={isMenuOpen} onClose={toggleDrawer(false)}>
-        <Box sx={{ maxWidth: "600px" }}>
+        <Box sx={{ width: { xs: "100%", sm: "600px" } }}>
           <Basket onCloseClick={handleOnCloseClick} />
         </Box>
       </Drawer>
