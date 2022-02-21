@@ -121,6 +121,13 @@ export const defaultTheme = {
         },
       },
     },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          borderRadius: 0,
+        },
+      },
+    },
     MuiButton: {
       defaultProps: {
         disableElevation: true,
