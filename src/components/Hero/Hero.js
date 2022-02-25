@@ -49,7 +49,7 @@ export default function Hero() {
           <List dense>
             {generate(
               <ListItem>
-                <ListItemIcon sx={{ width: 22 }}>
+                <ListItemIcon sx={{ width: 22, minWidth: "auto", mr: 2 }}>
                   <svg
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
                     focusable="false"
